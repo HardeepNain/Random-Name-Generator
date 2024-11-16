@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Names</title>
+  <style>
+    /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#randomName {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+  </style>
+</head>
+<body>
+  <h1>Random Name Generator</h1>
+  <button onclick="generateRandomName()">Get Random Name</button>
+  <p id="randomName">Click the button to see a name!</p>
+
+  <script>
+    const names = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona"];
+
+    function generateRandomName() {
+      const randomIndex = Math.floor(Math.random() * names.length);
+      document.getElementById("randomName").textContent = names[randomIndex];
+    }
+  </script>
+</body>
+</html>
